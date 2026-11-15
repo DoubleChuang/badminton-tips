@@ -1,17 +1,28 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-Hant" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="theme-color" content="#0b1512" />
+    <script>
+      try {
+        const theme = localStorage.getItem('badminton-theme')
+        if (theme === 'light' || theme === 'dark') {
+          document.documentElement.dataset.theme = theme
+          document
+            .querySelector('meta[name="theme-color"]')
+            ?.setAttribute('content', theme === 'light' ? '#f2eadc' : '#0b1512')
+        }
+      } catch {}
+    </script>
     <meta
       name="description"
       content="羽球戰術板：單打與雙打站位、面向、軀幹與球路標記。"
     />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <title>羽球戰術板</title>
-    <script type="module" crossorigin src="./assets/index-Bxa0LUks.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Dc15J9RX.css">
+    <script type="module" crossorigin src="./assets/index-BmgY54J8.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BrvEcl1Y.css">
   </head>
   <body>
     <div id="app"></div>
